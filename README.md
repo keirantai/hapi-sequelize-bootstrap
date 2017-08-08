@@ -30,3 +30,14 @@ By default, this project includes a Sample model plus basic restful API handler.
 * *routes* - Contains basic routes for handling server requests.
 * *tests* - Contains test scripts which are executed by using mocha command.
 * *server.js* - Server entry script.
+
+## Create Model
+
+This project complies the same file structure of Sequelize-cli which has */migrations* folder for all database migration scripts and */models* folder for all data models.
+
+To create a new model for your own purpose, you can copy the */model/sample.js* and modify as your own model. Or, you can use Sequelize-cli command to create a new model + migration.
+
+```shell
+$ npm install -g sequelize-cli # if you want to install Sequelize-cli as global command
+$ sequelize model:create --name <new model name> --attributes '<column1>:<data type>, <column2>:<data type>'
+```
