@@ -3,4 +3,8 @@ database:
   username: 'database_username'
   password: 'database_password'
   options:
-    - dialect: 'mysql'
+    host: 'localhost'
+    dialect: 'sqlite'
+    storage: './database/sample.sqlite'
+server:
+  port: 3000

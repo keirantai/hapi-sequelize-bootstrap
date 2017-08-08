@@ -3,6 +3,9 @@
 const config = require('config').server;
 const Hapi = require('hapi');
 const server = new Hapi.Server();
+let app = require('./libs/app');
+let models = require('./models/index');
+app.set('models', models);
 
 server.connection(config);
 

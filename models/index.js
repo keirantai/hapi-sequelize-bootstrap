@@ -15,9 +15,10 @@ var sequelize = new Sequelize(
 // load models
 var models = [
 	// Sample: 'ModelName'
+	'Sample'
 ];
 models.forEach((model) => {
-	module.exports[model] = sequelize.import(path.join(__dirname, model));
+	module.exports[model] = sequelize.import(path.join(__dirname, model.toLowerCase()));
 });
 
 // describe relationships

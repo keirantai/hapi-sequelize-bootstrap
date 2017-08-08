@@ -1,5 +1,7 @@
 'use strict';
 
+let app = require('../libs/app');
+
 class BaseController {
 
 	/**
@@ -24,7 +26,7 @@ class BaseController {
 	 * Initialize model by provided model name
 	 */
 	init() {
-		
+		this.model = app.get('models')[this.modelName];
 	}
 
 	/**

@@ -1,13 +1,13 @@
 'use strict';
-
 module.exports = function(sequelize, DataTypes) {
-	return sequelize.define('Sample', {
-		content: DataTypes.STRING
-	}, {
-		instanceMethods: {
-			countTasks: function() {
-			  // how to implement this method ?
-			}
-		}
-	});
+  var Sample = sequelize.define('Sample', {
+    content: DataTypes.TEXT
+  }, {
+    classMethods: {
+      associate: function(models) {
+        // associations can be defined here
+      }
+    }
+  });
+  return Sample;
 };
