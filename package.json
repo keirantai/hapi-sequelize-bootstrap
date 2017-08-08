@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/keirantai/hapi-sequelize-bootstrap.git"
   },
-  "author": "Keiran Tai <tkeiran@gmail.com> (http://www.taicreation.com/)",
+  "author": "Keiran Tai <tkeiran@gmail.com> (https://github.com/keirantai)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/keirantai/hapi-sequelize-bootstrap/issues"
