@@ -1,0 +1,27 @@
+{
+  "name": "hapi-sequelize-bootstrap",
+  "version": "1.0.0",
+  "description": "Bootstrap project for HAPI + Sequelize ORM",
+  "main": "server.js",
+  "scripts": {
+    "prestart": "npm install",
+    "start": "node server.js",
+    "debug": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keirantai/hapi-sequelize-bootstrap.git"
+  },
+  "author": "Keiran Tai <tkeiran@gmail.com> (http://www.taicreation.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/keirantai/hapi-sequelize-bootstrap/issues"
+  },
+  "homepage": "https://github.com/keirantai/hapi-sequelize-bootstrap#readme",
+  "dependencies": {
+    "config": "^1.26.1",
+    "hapi": "^16.5.2",
+    "sequelize": "^4.4.2"
+  }
+}
