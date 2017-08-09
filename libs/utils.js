@@ -17,3 +17,20 @@ exports.pluralize = (name) => {
 	}
 	return nameInPlural;
 }
+
+/**
+ * Convert phase to upper camel case.
+ * e.g. this-is-a-camel to ThisIsACamel
+ * @param  {string} phase       Original dash separated phase
+ * @param  {string} delimitator Delimitator to convert as cammel. Default is a dash (-).
+ * @return {string}             Upper camel case phase
+ */
+exports.upperCamel = (phase, delimitator) => {
+	delimitator = delimitator || '-';
+	let words = phase.split(delimitator);
+	let newPhase = '';
+	words.forEach(w => {
+		newPhase += w.charAt(0).toUpperCase() + w.slice(1);
+	});
+	return newPhase;
+}

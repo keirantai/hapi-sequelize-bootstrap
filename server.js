@@ -17,7 +17,7 @@ server.route({
 	}
 });
 
-server.route(require('./routes/base_route').routes('Sample'));
+server.route(require('./routes/base-route').routes('Sample'));
 
 server.start((err) => {
 	if (err) {

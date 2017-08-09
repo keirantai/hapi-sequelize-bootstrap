@@ -6,10 +6,11 @@
  */
 
 const utils = require('../libs/utils');
+const factory = require('../controllers/factory');
 
 exports.routes = (ctrlName) => {
 	let ctrlNameInPlural = utils.pluralize(ctrlName).toLowerCase();
-	let ctrl = require('../controllers/' + ctrlName).create();
+	let ctrl = factory.create(ctrlName);
 	let routes = [
 		{
 			method: 'GET',

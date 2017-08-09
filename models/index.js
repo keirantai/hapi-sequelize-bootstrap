@@ -1,8 +1,9 @@
 'use strict';
 
 const Sequelize = require('sequelize');
-const config = require('config').database;
 const path = require('path');
+const config = require('config').database;
+const utils = require('../libs/utils');
 
 // initialize database connection
 var sequelize = new Sequelize(
@@ -13,12 +14,10 @@ var sequelize = new Sequelize(
 );
 
 // load models
-var models = [
-	// Sample: 'ModelName'
-	'Sample'
-];
-models.forEach((model) => {
-	module.exports[model] = sequelize.import(path.join(__dirname, model.toLowerCase()));
+let models = require('config').models;
+models.forEach((modelFilename) => {
+	let model = utils.upperCamel(modelFilename);
+	module.exports[model] = sequelize.import(path.join(__dirname, modelFilename));
 });
 
 // describe relationships

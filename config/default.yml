@@ -8,3 +8,6 @@ database:
     storage: './database/sample.sqlite'
 server:
   port: 3000
+
+models:
+  - sample
