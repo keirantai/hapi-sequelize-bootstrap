@@ -1,0 +1,13 @@
+database:
+  name: 'database_name'
+  username: 'database_username'
+  password: 'database_password'
+  options:
+    host: 'localhost'
+    dialect: 'sqlite'
+    storage: './database/sample.sqlite'
+server:
+  port: 3000
+
+models:
+  - sample
